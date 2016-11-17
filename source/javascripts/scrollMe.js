@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	$('.item-scroll-me').on('click', function () {
 		$('.item-illustrations').toggleClass('item-illustrations-scroll');
 		$('.item-scroll-me').toggleClass('item-scroll-me-active');
@@ -11,4 +12,5 @@ $(document).ready(function(){
 		$('.item-scroll-me').html('scroll me');
 		$('.item-illustrations').scrollTop(0);
 	})
+	
 });
