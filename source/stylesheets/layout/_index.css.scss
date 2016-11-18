@@ -41,90 +41,171 @@ p {
 		margin: 50px 0;
 	}
 }
+
 .work {
-	margin: 50px 0 80px;
+	padding: 50px 0 20px;
 	h3 {
 		text-align: center;
 		font-size: 32px;
 		font-weight: 600;
-		margin-bottom: 40px;
+		margin-top: 0;
+		margin-bottom: 30px;
 	}
-	#work-carousel {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+	.carousel-nav-wrapper {
+		position: relative;
+		width: 90%;
+		max-width: 900px;
+		margin: auto;
+		text-align: right;
+		z-index: 1;
+		@media (max-width: 425px) {
+			display: none !important;
+		}
 		.carousel-nav {
+			position: absolute;
+			right: 0;
+			padding-top: 35px;
+			padding-left: 40px;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			width: 115px;
+			background: white;
 			img {
-				width: 40px;
+				width: 30px;
+				cursor: pointer;
+				transform: scale(1);
+				-webkit-transition: transform 0.3s;
+				transition: transform 0.3s;
+				&:hover {
+					transform: scale(1.1);
+					-webkit-transition: transform 0.3s;
+					transition: transform 0.3s;	
+				}
 			}
 		}
-		.carousel-inner {
-			width: 900px;
-			margin: 0 40px;
-			.item {
-				// position: relative; this was the problem
-				.item-intro {
-					display: flex;
-					justify-content: space-between;
-					align-items: flex-end;
-					margin-bottom: 25px;
-					.item-desc {
-						position: relative;
-						margin: 0px 10px;
-						span {
-							color: $green;
-							font-weight: 500;
-							font-size: 18px;
-						}
-						h4 {
-							font-size: 20px;
-							color: $blue;
-							margin: 0;
-						}
-						p {
-							color: $blue;
-							font-weight: 300;
-							font-size: 18px;
-						}
-						a {
-							text-decoration: none;
-							color: $green;
-							font-size: 16px;
-						}
+	}
+	.work-carousel {
+		.slick-list {
+			width: 90%;
+			max-width: 900px;
+			margin: auto;
+		}
+		.item {
+			.item-intro {
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: space-between;
+				align-items: flex-end;
+				margin-bottom: 25px;
+				.item-desc {
+					position: relative;
+					@media (max-width: 425px) {
+						width: 100%;
 					}
-					a {
-						font-weight: 900;
-						font-size: 16px;
-						padding: 5px 10px;
-						text-align: center;
-						background: $green;
-						cursor: pointer;
-						border-radius: 3px;
-						color: white;
-						margin-right: 10px;
-						text-decoration: none;
-						&:hover {
-
-							background: lighten($green, 10%)
-						}
+					span {
+						color: $green;
+						font-weight: 500;
+						font-size: 18px;
+					}
+					h4 {
+						font-size: 20px;
+						color: $blue;
+						margin: 0;
+					}
+					p {
+						color: $blue;
+						font-weight: 300;
+						font-size: 18px;
+					}
+				}
+			}
+			.item-illustrations {
+				height: 41vw;
+				max-height: 400px;
+				overflow: hidden;
+				border: 1px solid $grey-light;
+				border-radius: 5px;
+				img {
+					width: 100%;
+				}
+			}
+			.item-illustrations-scroll {
+				overflow: scroll;
+			}
+			.item-actions {
+				display: flex;
+				flex-flow: row wrap;
+				margin: 25px 0;
+				font-weight: 900;
+				font-size: 16px;
+				@media (max-width: 425px) {
+					justify-content: space-between;
+				}
+				p {
+					font-weight: 900;
+					font-size: 16px;
+					margin-left: 5px;
+					padding: 6px 20px;
+					text-align: center;
+					cursor: pointer;
+					border-radius: 3px;
+					color: $blue;
+					text-decoration: none;
+					&:hover {
+						background: lighten($green, 10%);
+					}
+				}
+				.item-progress {
+					padding: 0;
+					margin-top: -10px;
+					color: $green;
+					&:after {
+						position: relative;
+						top: 3px;
+						left: 3px;
+						content: image-url('icons/tennis.svg');
+						height: 20px;
+						width: 20px;
+					}
+				}
+				.item-offline {
+					background: $grey-light;
+					&:after {
+						content: "\1F6A7";
+					}
+				}
+				.item-visit-me {
+					margin-left: 5px;
+					padding: 6px 20px;
+					width: 106px;
+					text-align: center;
+					background: $green;
+					cursor: pointer;
+					border-radius: 3px;
+					color: white;
+					text-decoration: none;
+					&:hover {
+						background: lighten($green, 10%)
+					}
+					@media (max-width: 425px) {
+						width: 48%
 					}
 				}
 				.item-scroll-me {
-					position: absolute;
-					bottom: 0;
-					left: 10px;
-					font-weight: 900;
-					font-size: 16px;
-					padding: 5px;
-					width: 100px;
+					margin-right: 5px;
+					padding: 6px 20px;
+					width: 106px;
 					text-align: center;
 					background: $blue;
 					cursor: pointer;
-					border-top-right-radius: 3px;
-					border-bottom-left-radius: 3px;
+					border-radius: 3px;
 					color: white;
 					&:hover {
 						background: lighten($blue, 3%)
+					}
+					@media (max-width: 425px) {
+						width: 48%
 					}
 				}
 				.item-scroll-me-active {
@@ -132,19 +213,6 @@ p {
 					&:hover {
 						background: lighten($red, 3%)
 					}
-				}
-				.item-illustrations {
-					margin: 10px;
-					height: 400px;
-					overflow: hidden;
-					box-shadow: 0 1px 2px 0 rgba(168,182,191,0.6);
-					border-radius: 5px;
-					img {
-						width: 100%;
-					}
-				}
-				.item-illustrations-scroll {
-					overflow: scroll;
 				}
 			}
 		}
@@ -204,7 +272,7 @@ p {
 		align-items: flex-end;
 		margin: auto;
 		.timeline-item {
-			height: 100px;
+			height: 80px;
 			width: 90%;
 			text-align: left;
 			padding: 0 30px 0 50px;
@@ -255,7 +323,7 @@ p {
 		.form-input {
 			width: 80%;
 			background: white;
-			border: 1px solid $grey-light;
+			border: 1px solid white;
 			border-radius: 3px;
 			margin: auto;
 			margin-top: 6px;

@@ -25,148 +25,163 @@
 
 <div class='work'>
 	<h3>Work</h3>
-	<div id="work-carousel" class="carousel slide" data-ride="carousel" data-interval="0"><!-- class="carousel slide" -->
 
-    <a href="#work-carousel" class='carousel-nav' role="button" data-slide="prev">
-	  	<%= image_tag 'icons/arrow-left.svg' %>
-	  </a>
+	<div class='carousel-nav-wrapper'>
+		<div class='carousel-nav'>
+	  	<img id='carousel-nav-left' src='images/icons/arrow-left.svg' />
+	  	<img id='carousel-nav-right' src='images/icons/arrow-right.svg'/>
+		</div>
+	</div>
 
-    <div class="carousel-inner" role="listbox">
+	<div class='work-carousel'>
+    
+    <div class="item">
+    	<div class="item-intro">
+      	<div class="item-desc">
+      		<span>2017.</span>
+      		<h4>Paris Tennis Club</h4>
+          <p>product management</p>
+      	</div>
+    	</div>
+    	<div class='item-illustrations'>
+    		<img src="images/work/paristennis.png" />
+    	</div>
+    	<div class='item-actions'>
+  			<p class='item-progress'>Work in progress </p>
+  		</div>
+    </div>
 
-	    <div class="item active">
-      	<div class="item-intro">
-	      	<div class="item-desc">
-	      		<span>2016.</span>
-	      		<h4>Clustree corporate website</h4>
-		        <p>design + code</p>
-	      	</div>
-					<%= link_to 'visit website', 'https://www.clustree.com', target:'blank' %>
+	  <div class="item">
+	  	<div class="item-intro">
+	    	<div class="item-desc">
+	    		<span>2016.</span>
+	    		<h4>Clustree corporate website</h4>
+	        <p>design + code</p>
 	    	</div>
-      	<div class='item-illustrations'>
-	    		<%= image_tag 'work/clustree-corpo-2.png' %>
-	    	</div>
-      	<span class='item-scroll-me'>scroll me</i></span>
-      </div>
-
-
-      <div class="item">
-      	<div class="item-intro">
-	      	<div class="item-desc">
-	      		<span>2015-2016</span>
-	      		<h4>Clustree SaaS application</h4>
-		        <p>product management</p>
-	      	</div>
-					<%= link_to 'visit website', 'https://company.clustree.com', target:'blank' %>
-	    	</div>
-      	<div class='item-illustrations'>
-	    		<%= image_tag 'work/clustree-saas.png' %>
-	    	</div>
-      </div>
-
-      <div class="item">
-      	<div class="item-intro">
-	      	<div class="item-desc">
-	      		<span>work in progress</span>
-	      		<h4>Paris Tennis Club</h4>
-		        <p>product management</p>
-	      	</div>
-					<%= link_to 'visit website', '#', target:'blank' %>
-	    	</div>
-      	<div class='item-illustrations'>
-	    		<%= image_tag 'work/paristennis.png' %>
-	    	</div>
-      </div>
-
-			<div class="item">
-      	<div class="item-intro">
-	      	<div class="item-desc">
-	      		<span>2015.</span>
-	      		<h4>Clustree corporate website</h4>
-		        <p>product management</p>
-	      	</div>
-					<%= link_to 'visit website', 'https://www.clustree.com', target:'blank' %>
-	    	</div>
-      	<div class='item-illustrations'>
-	    		<%= image_tag 'work/clustree-corpo-1.png' %>
-	    	</div>
-      </div>
-
-      <div class="item">
-      	<div class="item-intro">
-	      	<div class="item-desc">
-	      		<span>2015.</span>
-	      		<h4>Clustree Blog</h4>
-		        <p>product management</p>
-	      	</div>
-					<%= link_to 'visit website', 'https://fr.news.clustree.com', target:'blank' %>
-	    	</div>
-      	<div class='item-illustrations'>
-	    		<%= image_tag 'work/clustree-blog.png' %>
-	    	</div>
-      </div>
-
-      <div class="item">
-      	<div class="item-intro">
-	      	<div class="item-desc">
-	      		<span>2015.</span>
-	      		<h4>Makiwars</h4>
-		        <p>product management</p>
-	      	</div>
-					<%= link_to 'visit website', 'http://makiswar-production.herokuapp.com/', target:'blank' %>
-	    	</div>
-      	<div class='item-illustrations'>
-	    		<%= image_tag 'work/makiwars.png' %>
-	    	</div>
-      </div>
-
-       <div class="item">
-      	<div class="item-intro">
-	      	<div class="item-desc">
-	      		<span>2015.</span>
-	      		<h4>Booom</h4>
-		        <p>product management</p>
-	      	</div>
-					<%= link_to 'visit website', 'http://booom.herokuapp.com/' %>
-	    	</div>
-      	<div class='item-illustrations'>
-	    		<%= image_tag 'work/booom.png' %>
-	    	</div>
-      </div>
-
-      <div class="item">
-      	<div class="item-intro">
-	      	<div class="item-desc">
-	      		<span>2013-2014</span>
-	      		<h4>Sokorpo</h4>
-		        <p>product management</p>
-	      	</div>
-					<%= link_to 'offline :(', '#', style:'background:#bdc3c7;' %>
-	    	</div>
-      	<div class='item-illustrations'>
-	    		<%= image_tag 'work/sokorpo.png' %>
-	    	</div>
-      </div>
-
-			<div class="item">
-      	<div class="item-intro">
-	      	<div class="item-desc">
-	      		<span>2012-2013</span>
-	      		<h4>Liiist</h4>
-		        <p>product management</p>
-	      	</div>
-					<%= link_to 'offline :(', '#', style:'background:#bdc3c7;' %>
-	    	</div>
-      	<div class='item-illustrations'>
-	    		<%= image_tag 'work/liiist.png' %>
-	    	</div>
-      </div>
-
+	  	</div>
+	  	<div class='item-illustrations'>
+	  		<img src="images/work/clustree-corpo-2.png" />
+	  	</div>
+	  	<div class='item-actions'>
+		  	<span class='item-scroll-me'>scroll me</i></span>
+		  	<%= link_to 'visit me', 'https://www.clustree.com', target:'blank', class:'item-visit-me' %>
+	  	</div>
 	  </div>
 
-	  <a href="#work-carousel" class='carousel-nav' role="button" data-slide="next">
-  		<%= image_tag 'icons/arrow-right.svg' %>
-  	</a>
-	</div>	
+	  <div class="item">
+	  	<div class="item-intro">
+	    	<div class="item-desc">
+	    		<span>2015-2016</span>
+	    		<h4>Clustree SaaS application</h4>
+	        <p>product management</p>
+	    	</div>
+	  	</div>
+	  	<div class='item-illustrations'>
+	  		<img src="images/work/clustree-saas.png" />
+	  	</div>
+	  	<div class='item-actions'>
+	  		<%= link_to 'visit me', 'https://company.clustree.com', target:'blank', class:'item-visit-me' %>
+	  	</div>
+	  </div>
+
+		<div class="item">
+	  	<div class="item-intro">
+	    	<div class="item-desc">
+	    		<span>2015.</span>
+	    		<h4>Clustree corporate website</h4>
+	        <p>product management</p>
+	    	</div>
+	  	</div>
+	  	<div class='item-illustrations'>
+	  		<img src="images/work/clustree-corpo-1.png" />
+	  	</div>
+
+			<div class='item-actions'>
+				<%= link_to 'visit me', 'https://www.clustree.com', target:'blank', class:'item-visit-me' %>
+			</div>
+	  </div>
+
+	  <div class="item">
+	  	<div class="item-intro">
+	    	<div class="item-desc">
+	    		<span>2015.</span>
+	    		<h4>Clustree Blog</h4>
+	        <p>product management</p>
+	    	</div>
+	  	</div>
+	  	<div class='item-illustrations'>
+	  		<img src="images/work/clustree-blog.png" />
+	  	</div>
+			<div class='item-actions'>
+				<%= link_to 'visit me', 'https://fr.news.clustree.com', target:'blank', class:'item-visit-me' %>
+			</div>
+	  </div>
+
+	  <div class="item">
+	  	<div class="item-intro">
+	    	<div class="item-desc">
+	    		<span>2015.</span>
+	    		<h4>Makiwars</h4>
+	        <p>product management</p>
+	    	</div>
+	  	</div>
+	  	<div class='item-illustrations'>
+	  		<img src="images/work/makiwars.png" />
+	  	</div>
+			<div class='item-actions'>
+				<%= link_to 'visit me', 'http://makiswar-production.herokuapp.com', target:'blank', class:'item-visit-me' %>
+			</div>
+	  </div>
+
+	   <div class="item">
+	  	<div class="item-intro">
+	    	<div class="item-desc">
+	    		<span>2015.</span>
+	    		<h4>Booom</h4>
+	        <p>product management</p>
+	    	</div>
+	  	</div>
+	  	<div class='item-illustrations'>
+	  		<img src="images/work/booom.png" />
+	  	</div>
+			<div class='item-actions'>
+				<%= link_to 'visit me', 'http://booom.herokuapp.com', target:'blank', class:'item-visit-me' %>
+			</div>
+	  </div>
+
+	  <div class="item">
+	  	<div class="item-intro">
+	    	<div class="item-desc">
+	    		<span>2013-2014</span>
+	    		<h4>Sokorpo</h4>
+	        <p>product management</p>
+	    	</div>
+	  	</div>
+	  	<div class='item-illustrations'>
+	  		<img src="images/work/sokorpo.png" />
+	  	</div>
+	  	<div class='item-actions'>
+				<p class='item-offline'>offline :(</p>
+			</div>
+	  </div>
+
+		<div class="item">
+	  	<div class="item-intro">
+	    	<div class="item-desc">
+	    		<span>2012-2013</span>
+	    		<h4>Liiist</h4>
+	        <p>product management</p>
+	    	</div>
+	  	</div>
+	  	<div class='item-illustrations'>
+	  		<img src="images/work/liiist.png" />
+	  	</div>
+	  	<div class='item-actions'>
+				<p class='item-offline'>offline :(</p>
+			</div>
+	  </div>
+
+	</div>
 </div>
 
 <div class="line-separator"></div>
