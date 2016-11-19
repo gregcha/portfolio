@@ -1,9 +1,27 @@
-<div class='intro'>
+<div id='nav'>
+	<div class='nav-wrapper'>
+		<div class='gregcha'>
+			<%= image_tag 'me/me.png' %>
+			<p>gregcha<span>.</span></p>
+		</div>
+		<div class='nav-links'>
+			<a href="#work">work</a>
+			<a href="#about">about</a>
+			<a href="#footer">contact</a>
+		</div>
+	</div>
+</div>
+
+<div id='cover'>
+	<% image_tag 'icons/cover.svg' %>
+</div>
+
+<div id='intro'>
 	<h1>Hello! My name is Grégoire /[<span>gregwar</span>]/</h1>
 	<p>I'm a product manager living in Paris. I like to design and build cool products on my spare time. Currently working with awesome people at Clustree, I accept various freelance projects.</p>
 </div>
 
-<div class='domains'>
+<div id='domains'>
 	<div class='domain-single'>
 		<%= image_tag 'icons/product.svg' %>
 		<h2>Product Management</h2>
@@ -23,7 +41,7 @@
 
 <div class="line-separator"></div>
 
-<div class='work'>
+<div id='work'>
 	<h3>Work</h3>
 
 	<div class='carousel-nav-wrapper'>
@@ -161,7 +179,7 @@
 	  		<img src="images/work/sokorpo.png" />
 	  	</div>
 	  	<div class='item-actions'>
-				<p class='item-offline'>offline :(</p>
+				<p class='item-offline'>offline</p>
 			</div>
 	  </div>
 
@@ -177,7 +195,7 @@
 	  		<img src="images/work/liiist.png" />
 	  	</div>
 	  	<div class='item-actions'>
-				<p class='item-offline'>offline :(</p>
+				<p class='item-offline'>offline</p>
 			</div>
 	  </div>
 
@@ -186,8 +204,8 @@
 
 <div class="line-separator"></div>
 
-<div class='milestones'>
-  <h3>Milestones</h3>
+<div id='about'>
+  <h3>About</h3>
 
 	<div class='timeline'>
 		<div class='axis'>
@@ -234,7 +252,7 @@
 
 </div>
 
-<div class='footer'>
+<div id='footer'>
 	<h3>Get in <span>touch</span></h3>
 	<form class='form'>
 		<input type="text" name="_gotcha" style="display:none" />

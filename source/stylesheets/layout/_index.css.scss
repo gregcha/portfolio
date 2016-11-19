@@ -13,10 +13,34 @@ h2 {
 	margin: 15px 0 10px;
 }
 
+h3 {
+	text-align: center;
+	font-size: 32px;
+	font-weight: 600;
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+
 p {
 	font-size: 20px;
 	font-weight: 100;
 	margin: 0;
+}
+
+@media (max-width: 768px) {
+	h1 {
+		font-size: 24px;
+	}
+	p {
+		font-size: 18px;	
+	}
+	h2 {
+		font-size: 20px;
+		margin: 15px 0 10px;
+	}
+	h3 {
+		font-size: 24px;
+	}
 }
 
 .line-separator {
@@ -24,33 +48,91 @@ p {
 	border-bottom: 1px solid $grey-light;
 }
 
-.intro {
+#nav {
+	border-bottom: 1px solid $grey-light;
+	background: white;
+	@media (max-width: 425px) {
+		display: none;
+	}
+	.nav-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 700px;
+		width: 90%;
+		margin: auto;
+		padding: 20px 0;
+		.gregcha {
+			display: flex;
+			align-items: center;
+			img {
+				margin-right: 10px;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				@media (max-width: 425px) {
+					display: none;
+				}
+			}
+			p {
+				font-weight: 900;
+				span {
+					color: $green;
+					font-size: 24px;
+				}
+			}
+		}
+		.nav-links {
+			font-weight: 900;
+			font-size: 20px;
+			a {
+				margin-left: 20px;
+				color: $blue;
+				text-decoration: none;
+				&:hover {
+					color: $green;
+				}
+			}
+		}
+	}	
+}
+
+#cover {
+	z-index: -1;
+	position: relative;
+	top: -15px;
+	opacity: 0.4;
+	background: image-url('icons/cover.svg') top center no-repeat;
+	height: 210px;
+}
+
+#intro {
 	text-align: center;
 	max-width: 600px;
+	width: 90%;
 	margin: auto;
-	span {
-		color: $green;
+	margin-top: -20px;
+	h1 {
+		font-weight: 900;
+		margin-top: 0;
+		span {
+			color: $green;
+		}
 	}
 }
 
-.domains {
+#domains {
 	text-align: center;
 	max-width: 525px;
+	width: 90%;
 	margin: auto;
 	.domain-single {
 		margin: 50px 0;
 	}
 }
 
-.work {
+#work {
 	padding: 50px 0 20px;
-	h3 {
-		text-align: center;
-		font-size: 32px;
-		font-weight: 600;
-		margin-top: 0;
-		margin-bottom: 30px;
-	}
 	.carousel-nav-wrapper {
 		position: relative;
 		width: 90%;
@@ -219,14 +301,8 @@ p {
 	}
 }
 
-.milestones {
-	margin-top: 50px;
-	h3 {
-		text-align: center;
-		font-size: 32px;
-		font-weight: 600;
-		margin-bottom: 40px;
-	}
+#about {
+	padding-top: 50px;
 	.timeline {
 		position: absolute;
 		left: 10%;
@@ -302,16 +378,11 @@ p {
 	}
 }
 
-.footer {
+#footer {
 	background: $blue;
 	padding: 50px 0px;
 	h3 {
 		color: white;
-		text-align: center;
-		font-size: 32px;
-		font-weight: 600;
-		margin-bottom: 40px;
-		margin-top: 0;
 		span {
 			color: $green;
 		}
@@ -323,7 +394,7 @@ p {
 		.form-input {
 			width: 80%;
 			background: white;
-			border: 1px solid white;
+			border: none;
 			border-radius: 3px;
 			margin: auto;
 			margin-top: 6px;
