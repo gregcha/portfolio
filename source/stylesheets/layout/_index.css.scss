@@ -14,7 +14,7 @@ h2 {
 }
 
 h3 {
-	text-align: center;
+  text-align: center;
 	font-size: 32px;
 	font-weight: 600;
 	margin-top: 0;
@@ -32,7 +32,7 @@ p {
 		font-size: 24px;
 	}
 	p {
-		font-size: 18px;	
+		font-size: 18px;
 	}
 	h2 {
 		font-size: 20px;
@@ -43,7 +43,7 @@ p {
 	}
 }
 
-.line-separator {
+.separator {
 	height: 1px;
 	border-bottom: 1px solid $grey-light;
 }
@@ -94,7 +94,7 @@ p {
 				}
 			}
 		}
-	}	
+	}
 }
 
 #cover {
@@ -104,6 +104,10 @@ p {
 	opacity: 0.4;
 	background: image-url('icons/cover.svg') top center no-repeat;
 	height: 210px;
+  @media (max-width: 425px) {
+    height: 100px;
+    background-size: cover;
+  }
 }
 
 #intro {
@@ -111,7 +115,6 @@ p {
 	max-width: 600px;
 	width: 90%;
 	margin: auto;
-	margin-top: -20px;
 	h1 {
 		font-weight: 900;
 		margin-top: 0;
@@ -133,6 +136,11 @@ p {
 
 #work {
 	padding: 50px 0 20px;
+  text-align: center;
+  h3 {
+    display: inline-block;
+    box-shadow: inset 0 -15px 0 rgba(78,255,187,0.55);
+  }
 	.carousel-nav-wrapper {
 		position: relative;
 		width: 90%;
@@ -162,7 +170,7 @@ p {
 				&:hover {
 					transform: scale(1.1);
 					-webkit-transition: transform 0.3s;
-					transition: transform 0.3s;	
+					transition: transform 0.3s;
 				}
 			}
 		}
@@ -174,12 +182,13 @@ p {
 			margin: auto;
 		}
 		.item {
+      text-align: left;
 			.item-intro {
 				display: flex;
 				flex-flow: row wrap;
 				justify-content: space-between;
 				align-items: flex-end;
-				margin-bottom: 25px;
+				margin-bottom: 20px;
 				.item-desc {
 					position: relative;
 					@media (max-width: 425px) {
@@ -197,8 +206,11 @@ p {
 					}
 					p {
 						color: $blue;
-						font-weight: 300;
+						font-weight: 100;
 						font-size: 18px;
+            @media (max-width: 425px) {
+              font-size: 16px;
+            }
 					}
 				}
 			}
@@ -215,87 +227,84 @@ p {
 			.item-illustrations-scroll {
 				overflow: scroll;
 			}
-			.item-actions {
+			.item-footer {
 				display: flex;
 				flex-flow: row wrap;
-				margin: 25px 0;
-				font-weight: 900;
-				font-size: 16px;
-				@media (max-width: 425px) {
-					justify-content: space-between;
-				}
-				p {
-					font-weight: 900;
-					font-size: 16px;
-					margin-left: 5px;
-					padding: 6px 20px;
-					text-align: center;
-					cursor: pointer;
-					border-radius: 3px;
-					color: $blue;
-					text-decoration: none;
-					&:hover {
-						background: lighten($green, 10%);
-					}
-				}
-				.item-progress {
-					padding: 0;
-					margin-top: -10px;
-					color: $green;
-					&:after {
-						position: relative;
-						top: 3px;
-						left: 3px;
-						content: image-url('icons/tennis.svg');
-						height: 20px;
-						width: 20px;
-					}
-				}
-				.item-offline {
-					background: $grey-light;
-					&:after {
-						content: "\1F6A7";
-					}
-				}
-				.item-visit-me {
-					margin-left: 5px;
-					padding: 6px 20px;
-					width: 106px;
-					text-align: center;
-					background: $green;
-					cursor: pointer;
-					border-radius: 3px;
-					color: white;
-					text-decoration: none;
-					&:hover {
-						background: lighten($green, 10%)
-					}
-					@media (max-width: 425px) {
-						width: 48%
-					}
-				}
-				.item-scroll-me {
-					margin-right: 5px;
-					padding: 6px 20px;
-					width: 106px;
-					text-align: center;
-					background: $blue;
-					cursor: pointer;
-					border-radius: 3px;
-					color: white;
-					&:hover {
-						background: lighten($blue, 3%)
-					}
-					@media (max-width: 425px) {
-						width: 48%
-					}
-				}
-				.item-scroll-me-active {
-					background: $red;
-					&:hover {
-						background: lighten($red, 3%)
-					}
-				}
+				margin: 20px 0;
+				justify-content: space-between;
+        .item-domains {
+          @media (max-width: 425px) {
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+            order: 2;
+          }
+          img {
+            display: inline-block;
+            width: 34px;
+            height: 34px;
+            margin-right: 10px;
+          }
+        }
+        .item-actions {
+          font-weight: 900;
+          font-size: 16px;
+          text-align: center;
+          @media (max-width: 425px) {
+            width: 100%;
+            text-align: center;
+          }
+          .item-progress, .item-offline, {
+            display: inline-block;
+            padding: 6px 20px;
+            border-radius: 3px;
+  					color: $blue;
+            background: $grey-light;
+            @media (max-width: 425px) {
+              width: 100%;
+            }
+  				}
+  				.item-visit-me {
+            display: inline-block;
+  					margin-left: 5px;
+  					padding: 6px 20px;
+  					width: 106px;
+  					background: $green;
+  					cursor: pointer;
+  					border-radius: 3px;
+  					color: white;
+  					text-decoration: none;
+  					&:hover {
+  						background: darken($green, 10%)
+  					}
+            @media (max-width: 425px) {
+              width: 100%;
+              margin-left: 0px;
+            }
+  				}
+  				.item-scroll-me {
+            display: inline-block;
+  					margin-right: 5px;
+  					padding: 6px 20px;
+  					width: 106px;
+  					background: $blue;
+  					cursor: pointer;
+  					border-radius: 3px;
+  					color: white;
+  					&:hover {
+  						background: lighten($blue, 5%)
+  					}
+            @media (max-width: 425px) {
+              display: none;
+            }
+  				}
+  				.item-scroll-me-active {
+  					background: $red;
+  					&:hover {
+  						background: lighten($red, 3%)
+  					}
+  				}
+        }
 			}
 		}
 	}
@@ -303,6 +312,11 @@ p {
 
 #about {
 	padding-top: 50px;
+  text-align: center;
+  h3 {
+    display: inline-block;
+    box-shadow: inset 0 -15px 0 rgba(78,255,187,0.55);
+  }
 	.timeline {
 		position: absolute;
 		left: 10%;
@@ -383,10 +397,23 @@ p {
 	padding: 50px 0px;
 	h3 {
 		color: white;
+    margin-bottom: 10px;
 		span {
 			color: $green;
 		}
 	}
+  .footer-links {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    a {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        color: $green;
+      }
+    }
+  }
 	.form {
 		max-width: 500px;
 		text-align: center;
