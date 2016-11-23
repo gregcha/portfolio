@@ -18,14 +18,16 @@
 
 <div id='intro'>
 	<h1>Hello! My name is Grégoire /[<span>gregwar</span>]/</h1>
-	<p>I'm a product manager living in Paris. I like to design and build cool products on my spare time. Currently working with awesome people at Clustree, I accept various freelance projects.</p>
+	<p>
+    I'm a product manager living in Paris. I like to design and build cool products on my spare time. Passionate about solving complex problems, and driving cross-functional teams in dynamic environments.
+  </p>
 </div>
 
 <div id='domains'>
 	<div class='domain-single'>
 		<%= image_tag 'icons/product.svg' %>
 		<h2>Product Management</h2>
-		<p>User research, customer interviews, requirements gathering, feature definition, sketching and wireframing are some of my day to day activities.</p>
+		<p>User research, data analysis, customer interviews, requirements gathering, feature definition, sketching and wireframing are some of my day to day activities.</p>
 	</div>
 	<div class='domain-single'>
 		<%= image_tag 'icons/design.svg' %>
@@ -93,8 +95,8 @@
           <%= image_tag 'icons/code.svg' %>
         </div>
         <div class='item-actions'>
-          <span class='item-scroll-me'>scroll me</i></span>
-          <%= link_to 'visit me', 'https://www.clustree.com', target:'blank', class:'item-visit-me' %>
+          <!-- <span class='item-scroll-me'>scroll me</i></span> -->
+          <%= link_to 'visit me', 'https://www.clustree.com', title:'visit Clustree corporate website', target:'blank', class:'item-visit-me' %>
         </div>
 	  	</div>
 	  </div>
@@ -116,7 +118,7 @@
           <%= image_tag 'icons/design.svg' %>
         </div>
         <div class='item-actions'>
-	  		 <%= link_to 'visit me', 'https://company.clustree.com', target:'blank', class:'item-visit-me' %>
+	  		 <%= link_to 'visit me', 'https://company.clustree.com', title:'visit Clustree saas application', target:'blank', class:'item-visit-me' %>
 	  	  </div>
       </div>
 	  </div>
@@ -138,7 +140,7 @@
           <%= image_tag 'icons/code.svg' %>
         </div>
         <div class='item-actions'>
-				  <%= link_to 'visit me', 'https://www.clustree.com', target:'blank', class:'item-visit-me' %>
+				  <%= link_to 'visit me', 'https://www.clustree.com', title:'visit Clustree corporate website new version', target:'blank', class:'item-visit-me' %>
         </div>
       </div>
 	  </div>
@@ -160,7 +162,7 @@
           <%= image_tag 'icons/code.svg' %>
         </div>
         <div class='item-actions'>
-				  <%= link_to 'visit me', 'https://fr.news.clustree.com', target:'blank', class:'item-visit-me' %>
+				  <%= link_to 'visit me', 'https://fr.news.clustree.com', title:'visit Clustree blog', target:'blank', class:'item-visit-me' %>
         </div>
 			</div>
 	  </div>
@@ -183,7 +185,7 @@
           <%= image_tag 'icons/code.svg' %>
         </div>
         <div class='item-actions'>
-				  <%= link_to 'visit me', 'http://makiswar-production.herokuapp.com', target:'blank', class:'item-visit-me' %>
+				  <%= link_to 'visit me', 'http://makiswar-production.herokuapp.com', title:'visit MakiWars', target:'blank', class:'item-visit-me' %>
 			  </div>
       </div>
 	  </div>
@@ -206,7 +208,7 @@
           <%= image_tag 'icons/code.svg' %>
         </div>
         <div class='item-actions'>
-				  <%= link_to 'visit me', 'http://booom.herokuapp.com', target:'blank', class:'item-visit-me' %>
+				  <%= link_to 'visit me', 'http://booom.herokuapp.com', title:'visit Booom', target:'blank', class:'item-visit-me' %>
         </div>
       </div>
 	  </div>
@@ -225,8 +227,6 @@
       <div class='item-footer'>
         <div class='item-domains'>
           <%= image_tag 'icons/product.svg' %>
-          <%= image_tag 'icons/design.svg' %>
-          <%= image_tag 'icons/code.svg' %>
         </div>
         <div class='item-actions'>
           <span class='item-offline'>offline</span>
@@ -248,8 +248,6 @@
       <div class='item-footer'>
         <div class='item-domains'>
           <%= image_tag 'icons/product.svg' %>
-          <%= image_tag 'icons/design.svg' %>
-          <%= image_tag 'icons/code.svg' %>
         </div>
         <div class='item-actions'>
           <span class='item-offline'>offline</span>
@@ -263,8 +261,11 @@
 <div class="separator"></div>
 
 <div id='about'>
-  <h3>About</h3>
-
+  <div class='about-intro'>
+    <h3>About</h3>
+    <p>7 years of professional experience in large scale, hyper growth technology companies. Currently working with awesome people at
+    <%= link_to 'Clustree', 'https://www.clustree.com', target:'blank' %>, I accept various freelance projects.</p>
+  </div>
 	<div class='timeline'>
 		<div class='axis'>
 			<div class='dots'></div>
@@ -313,13 +314,13 @@
 <div id='footer'>
 	<h3>Get in <span>touch</span></h3>
   <div class='footer-links'>
-    <% link_to 'https://fr.linkedin.com/in/gregoirecharles', target:'blank' do %>
+    <% link_to 'https://fr.linkedin.com/in/gregoirecharles', title:'linkedin', target:'blank' do %>
       <i class="fa fa-linkedin-square" aria-hidden="true"></i>
     <% end %>
-    <% link_to 'https://github.com/gregcha', target:'blank' do %>
+    <% link_to 'https://github.com/gregcha', title:'github', target:'blank' do %>
       <i class="fa fa-github" aria-hidden="true"></i>
     <% end %>
-    <% link_to 'https://twitter.com/gregcha', target:'blank' do %>
+    <% link_to 'https://twitter.com/gregcha', title:'twitter', target:'blank' do %>
       <i class="fa fa-twitter-square" aria-hidden="true"></i>
     <% end %>
   </div>
@@ -331,4 +332,17 @@
     <textarea rows="5" name="message" class='form-input' placeholder='message' required></textarea>
 	  <button type="submit" value='Send'>send message</button>
 	</form>
+  <div class='copyrights'>
+    <div>
+      ©
+      <script type="text/javascript">
+        document.write(new Date().getFullYear());
+      </script>
+      gregcha - All Rights Reserved
+    </div>
+    <div>
+      Icons made by
+      <%= link_to 'Wissawa Khamsriwath', 'http://www.flaticon.com/authors/wissawa-khamsriwath', title: 'Wissawa Khamsriwath', target: 'blank' %>
+    </div>
+  </div>
 </div>
