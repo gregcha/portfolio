@@ -348,7 +348,6 @@ p {
 			margin: auto;
 			display: flex;
 			flex-flow: column nowrap;
-			justify-content: space-between;
 			align-items: center;
 			&:before {
 				content: "";
@@ -362,6 +361,7 @@ p {
 			.dots {
 				width: 24px;
 				height: 24px;
+        margin-bottom: 56px;
 				background-color: $green;
 				border: 3px solid $blue;
 				border-radius: 50%;
@@ -374,7 +374,6 @@ p {
 		max-width: 900px;
 		display: flex;
 		flex-flow: column nowrap;
-		justify-content: space-between;
 		align-items: flex-end;
 		margin: auto;
 		.timeline-item {
