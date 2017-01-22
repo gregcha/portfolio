@@ -236,6 +236,10 @@ p {
 					width: 100%;
 				}
 			}
+			.item-illustrations-captain {
+				height: auto;
+				max-height: 567px;
+			}
 			.item-illustrations-scroll {
 				overflow: scroll;
 			}
@@ -293,6 +297,9 @@ p {
               width: 100%;
               margin-left: 0px;
             }
+  				}
+  				.item-captain {
+						width: 150px;
   				}
   				.item-scroll-me {
             display: inline-block;
