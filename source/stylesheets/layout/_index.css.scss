@@ -270,59 +270,62 @@ p {
             width: 100%;
             text-align: center;
           }
+          .item-captain {
+            background: #0084FF;
+            &:hover {
+              background: darken(#0084FF, 10%)
+            }
+          }
           .item-progress, .item-offline, {
             display: inline-block;
             padding: 6px 20px;
             border-radius: 3px;
-  					color: $blue;
+            color: $blue;
             background: $grey-light;
             @media (max-width: 425px) {
               width: 100%;
             }
-  				}
-  				.item-visit-me {
+          }
+          .item-visit-me {
             display: inline-block;
-  					margin-left: 5px;
-  					padding: 6px 20px;
-  					width: 106px;
-  					background: $green;
-  					cursor: pointer;
-  					border-radius: 3px;
-  					color: white;
-  					text-decoration: none;
-  					&:hover {
-  						background: darken($green, 10%)
-  					}
+            margin-left: 5px;
+            padding: 6px 20px;
+            width: 106px;
+            background: $green;
+            cursor: pointer;
+            border-radius: 3px;
+            color: white;
+            text-decoration: none;
+            &:hover {
+              background: darken($green, 10%)
+            }
             @media (max-width: 425px) {
               width: 100%;
               margin-left: 0px;
             }
-  				}
-  				.item-captain {
-						width: 150px;
-  				}
-  				.item-scroll-me {
+          }
+          .item-scroll-me {
             display: inline-block;
-  					margin-right: 5px;
-  					padding: 6px 20px;
-  					width: 106px;
-  					background: $blue;
-  					cursor: pointer;
-  					border-radius: 3px;
-  					color: white;
-  					&:hover {
-  						background: lighten($blue, 5%)
-  					}
+            margin-right: 5px;
+            padding: 6px 20px;
+            width: 106px;
+            background: $blue;
+            cursor: pointer;
+            border-radius: 3px;
+            color: white;
+            &:hover {
+              background: lighten($blue, 5%)
+            }
             @media (max-width: 425px) {
               display: none;
             }
-  				}
-  				.item-scroll-me-active {
-  					background: $red;
-  					&:hover {
-  						background: lighten($red, 3%)
-  					}
-  				}
+          }
+          .item-scroll-me-active {
+            background: $red;
+            &:hover {
+              background: lighten($red, 3%)
+            }
+          }
         }
 			}
 		}
