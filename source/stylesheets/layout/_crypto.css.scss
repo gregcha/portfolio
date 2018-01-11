@@ -1,0 +1,22 @@
+.portfolio, .watchlist {
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 30px;
+}
+
+.folder {
+	font-size: 24px;
+	font-weight: 900;
+	margin-left: 10px;
+
+}
+
+.coinmarketcap-currency-widget {
+	@media (max-width: 569px) {
+		width: 100%
+	}
+}
+
+.coinmarketcap-currency-widget * {
+	font-family: $my-font !important;
+}
